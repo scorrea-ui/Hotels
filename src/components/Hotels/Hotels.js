@@ -11,7 +11,7 @@ class Hotels extends React.Component {
             {hotels.length > 0 ? (
               hotels.map((hotel) => (
                 <div className='column is-one-third' key={hotel.slug}>
-                  <Hotel hotel={hotel} />
+                  <Hotel key={hotel.slug} hotel={hotel} />
                 </div>
               ))
             ) : (

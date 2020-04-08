@@ -50,7 +50,9 @@ class Hotel extends React.Component {
               <div className='tags'>
                 <span className='tag is-medium is-info'>
                   {price}
-                  {Array(price).fill(<FontAwesomeIcon icon='dollar-sign' />)}
+                  {[...Array(price)].map((element, i) => (
+                    <FontAwesomeIcon icon='dollar-sign' key={i} />
+                  ))}
                 </span>
               </div>
             </div>
