@@ -49,8 +49,8 @@ class Hotel extends React.Component {
             <div className='control'>
               <div className='tags'>
                 <span className='tag is-medium is-info'>
-                  {price}{" "}
-                  {[price].fill(<FontAwesomeIcon icon='dollar-sign' />)}
+                  {price}
+                  {Array(price).fill(<FontAwesomeIcon icon='dollar-sign' />)}
                 </span>
               </div>
             </div>
