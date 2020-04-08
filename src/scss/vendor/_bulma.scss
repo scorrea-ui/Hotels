@@ -1,0 +1,11 @@
+@import 'bulma/bulma';
+
+.column {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
