@@ -60,7 +60,7 @@ class Hotel extends React.Component {
         </div>
         <div className='card-footer'>
           <a
-            href="javascript:alert('No implementamos esto aún :(')"
+            href='/'
             className='card-footer-item has-background-primary has-text-white has-text-weight-bold'
           >
             Reservar
