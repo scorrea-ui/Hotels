@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class Hotel extends React.Component {
   render() {
     const {
-      availabilityFrom,
-      availabilityTo,
       city,
       country,
       description,
