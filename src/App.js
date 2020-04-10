@@ -42,7 +42,7 @@ class App extends React.Component {
   handleFilteredData() {
     const hotels = [...hotelsData];
     const { dateFrom, dateTo, country, price, rooms } = this.state.filters;
-
+    // eslint-disable-next-line
     const filteredHotels = hotels.filter((hotel) => {
       const dateFromString = moment(hotel.availabilityFrom).format(
         "YYYY-MM-DD"
@@ -51,8 +51,14 @@ class App extends React.Component {
       const testCountry =
         hotel.country === country || country === "Todos los países";
       const testDates = dateFromString === dateFrom && dateToString <= dateTo;
-      const testPrices = hotel.price === parseInt(price) || price === 0;
-      const testRooms = hotel.rooms <= parseInt(rooms) || rooms === 0;
+      const testPrices =
+        hotel.price === parseInt(price) ||
+        price === 0 ||
+        price === "Cualquier precio";
+      const testRooms =
+        hotel.rooms <= parseInt(rooms) ||
+        rooms === 0 ||
+        rooms === "Cualquier tamaño";
 
       if (testCountry && testDates && testPrices && testRooms) {
         return hotel;
